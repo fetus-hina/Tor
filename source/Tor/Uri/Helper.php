@@ -85,7 +85,7 @@ class Tor_Uri_Helper {
             if($part === '.' || $part == '') {
                 // nothing to do
             } elseif($part === '..') {
-                if(count($work_parts) > 1) {
+                if(count($work_parts) > 0) {
                     $work_parts = array_slice($work_parts, 0, count($work_parts) - 1);
                 }
             } else {
