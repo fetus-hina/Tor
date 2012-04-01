@@ -15,7 +15,7 @@ class Tor_Jubeat_Copious_Musiclist {
     static public function download() {
         echo __METHOD__ . "(): Starting download...\n";
         $result = array();
-        for($p = 1; $p <= 3; ++$p) {
+        for($p = 1; $p <= 4; ++$p) {
             $last_error = null;
             for($retry = 0; $retry < 10; ++$retry) {
                 try {
