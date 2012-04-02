@@ -12,7 +12,7 @@
 class Tor_Jubegraph_Copious {
     const URL = 'http://jubegraph.dyndns.org/jubeat_copious/cgi/registFile.cgi';
 
-    static public function update($html_player, $html_music1, $html_music2, $html_music3) {
+    static public function update($html_player, $html_music1, $html_music2, $html_music3, $html_music4) {
         echo __METHOD__ . "(): Starting upload...\n";
         $client =
             Tor_Http_Client::getInstance()
@@ -21,7 +21,8 @@ class Tor_Jubegraph_Copious {
                 ->setFileUpload('player.html', 'playerData', $html_player, 'text/html')
                 ->setFileUpload('music1.html', 'musicData1', $html_music1, 'text/html')
                 ->setFileUpload('music2.html', 'musicData2', $html_music2, 'text/html')
-                ->setFileUpload('music3.html', 'musicData3', $html_music3, 'text/html');
+                ->setFileUpload('music3.html', 'musicData3', $html_music3, 'text/html')
+                ->setFileUpload('music4.html', 'musicData4', $html_music4, 'text/html');
         $resp = $client->request();
         if(!$resp->isSuccessful()) {
             echo __METHOD__ . "(): Jubegraph upload failed\n";

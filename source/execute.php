@@ -14,4 +14,4 @@ require_once(__DIR__ . '/bootstrap.php');
 Tor_Gate::login();
 $html_player = Tor_Jubeat_Copious_Playdata::download();
 $htmls_music = Tor_Jubeat_Copious_Musiclist::download();
-Tor_Jubegraph_Copious::update($html_player, $htmls_music[1], $htmls_music[2], $htmls_music[3]);
+Tor_Jubegraph_Copious::update($html_player, $htmls_music[1], $htmls_music[2], $htmls_music[3], $htmls_music[4]);
